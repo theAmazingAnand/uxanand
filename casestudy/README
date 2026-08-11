@@ -1,0 +1,18 @@
+# CarSlot UX case study — theme approval package
+
+This folder is intentionally isolated from every existing project output.
+
+## Files
+
+- `DESIGN.md` — the proposed visual system for the full case-study website.
+- `index.html` — a standalone, navigable preview of the proposed system.
+
+## Current scope
+
+This is the visual-direction approval stage only. It demonstrates the hero, navigation, process storytelling, research cards, information-architecture tree, user-flow diagram, screen presentation, validation treatment, and final-product CTA.
+
+The full UX case-study content will be produced only after this theme is approved.
+
+## Reference boundary
+
+The direction is an independent CarSlot adaptation informed by the public Nguyan creative-agency case study on Behance. No source artwork, branding, proprietary imagery, or original layouts are included.
