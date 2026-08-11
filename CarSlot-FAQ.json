@@ -1,0 +1,482 @@
+[
+  {
+    "id": "FAQ-001",
+    "category": "Discovery & Booking",
+    "question": "What is CarSlot?",
+    "answer": "CarSlot is a RedBus-style marketplace for automotive maintenance and inspection services in the Chennai Metropolitan Area, allowing car owners to compare and book eligible slots across authorized dealers and verified multi-brand workshops[cite: 1]."
+  },
+  {
+    "id": "FAQ-002",
+    "category": "Discovery & Booking",
+    "question": "How do I search for weekend service slots when centers are busy?",
+    "answer": "CarSlot features a flexible scheduling engine that lets you search by constraints like 'Nearest Weekend in Chennai' or 'Any weekday before Friday' across live bay, technician, and arrival capacity[cite: 1]."
+  },
+  {
+    "id": "FAQ-003",
+    "category": "Discovery & Booking",
+    "question": "Can I choose between Authorized Brand Dealers and Independent Workshops?",
+    "answer": "Yes, you can filter search results by brand authorized dealer centers (e.g., Maruti Suzuki, Hyundai) or verified independent multi-brand workshops (FNGs) based on distance, price, and credentials[cite: 1]."
+  },
+  {
+    "id": "FAQ-004",
+    "category": "Discovery & Booking",
+    "question": "What does 'Availability First' mean on CarSlot?",
+    "answer": "It means CarSlot only displays workshop capacity (bays, technicians, and arrival windows) that can be genuinely held or confirmed in real time[cite: 1]."
+  },
+  {
+    "id": "FAQ-005",
+    "category": "Discovery & Booking",
+    "question": "How long is a service slot held while I decide?",
+    "answer": "Selected appointment slots are placed on a temporary hold for 10 to 15 minutes to allow you to complete the booking and pay any required deposit[cite: 1]."
+  },
+  {
+    "id": "FAQ-006",
+    "category": "Discovery & Booking",
+    "question": "What happens if my temporary slot hold countdown expires?",
+    "answer": "If unconfirmed before the countdown expires, the hold is automatically released back to the public pool to ensure fair access for other users[cite: 1]."
+  },
+  {
+    "id": "FAQ-007",
+    "category": "Discovery & Booking",
+    "question": "What can I do if no exact match is available for my requested dates?",
+    "answer": "CarSlot will suggest nearby alternative dates or adjacent workshop locations, or you can opt to join the automated Waitlist for priority notifications[cite: 1]."
+  },
+  {
+    "id": "FAQ-008",
+    "category": "Discovery & Booking",
+    "question": "How does the automated Waitlist notification system work?",
+    "answer": "If another customer cancels or releases a slot, waitlisted users receive time-limited priority notifications to claim the newly opened appointment[cite: 1]."
+  },
+  {
+    "id": "FAQ-009",
+    "category": "Discovery & Booking",
+    "question": "Can I book a service with a specific travel deadline in mind?",
+    "answer": "Yes, you can input travel deadline constraints, and the platform will match centers with confirmable arrival and completion windows before your trip[cite: 1]."
+  },
+  {
+    "id": "FAQ-010",
+    "category": "Discovery & Booking",
+    "question": "How are organic search results ranked on CarSlot?",
+    "answer": "Organic options are ranked on a composite score evaluating preference fit, travel time, verified ratings confidence, specialist credentials, and on-time completion reliability[cite: 1]."
+  },
+  {
+    "id": "FAQ-011",
+    "category": "Diagnosis & Itemized Approvals",
+    "question": "Will the workshop perform additional work without my permission?",
+    "answer": "No. Under Business Rule BR-06, workshops must submit itemized digital estimates with photo/video evidence, and work cannot proceed without explicit customer approval[cite: 1]."
+  },
+  {
+    "id": "FAQ-012",
+    "category": "Diagnosis & Itemized Approvals",
+    "question": "How do I review additional repair recommendations from the technician?",
+    "answer": "Service advisors submit itemized digital estimates containing photos/videos, exact part costs, labor charges, taxes, warranty details, and estimated completion time impacts directly to your app[cite: 1]."
+  },
+  {
+    "id": "FAQ-013",
+    "category": "Diagnosis & Itemized Approvals",
+    "question": "Can I partially approve an estimate for recommended repairs?",
+    "answer": "Yes, the digital approval gate allows you to approve all items, select specific items, reject specific items, or request a callback from the advisor[cite: 1]."
+  },
+  {
+    "id": "FAQ-014",
+    "category": "Diagnosis & Itemized Approvals",
+    "question": "What happens if I reject a recommended repair item?",
+    "answer": "Unapproved items are immediately excluded from the active work order and cannot be performed or billed on your final invoice[cite: 1]."
+  },
+  {
+    "id": "FAQ-015",
+    "category": "Diagnosis & Itemized Approvals",
+    "question": "Are price estimates shown in search legally binding contracts?",
+    "answer": "All prices shown prior to physical workshop inspection are non-binding guidance estimates; binding quotes are issued only after physical inspection via an itemized work order[cite: 1]."
+  },
+  {
+    "id": "FAQ-016",
+    "category": "Diagnosis & Itemized Approvals",
+    "question": "How is visual evidence provided for component replacements?",
+    "answer": "Service advisors are mandated to upload time-stamped inspection photos or videos showing worn or damaged components before requesting approval[cite: 1]."
+  },
+  {
+    "id": "FAQ-017",
+    "category": "Diagnosis & Itemized Approvals",
+    "question": "What happens in a critical safety emergency during workshop inspection?",
+    "answer": "Certified advisors may perform emergency interventions strictly to prevent immediate vehicle harm, which are time-stamped and flagged for administrative audit[cite: 1]."
+  },
+  {
+    "id": "FAQ-018",
+    "category": "Diagnosis & Itemized Approvals",
+    "question": "How do I know if genuine spare parts are being used for my vehicle?",
+    "answer": "Itemized digital estimates list exact part manufacturer details and warranty coverage, backed by workshop SLA audits and partner credential verification[cite: 1]."
+  },
+  {
+    "id": "FAQ-019",
+    "category": "Diagnosis & Itemized Approvals",
+    "question": "Can I view the itemized price breakdown before approving work?",
+    "answer": "Yes, every estimate provides a transparent itemization separating individual part costs, labor fees, taxes, and applied warranties[cite: 1]."
+  },
+  {
+    "id": "FAQ-020",
+    "category": "Diagnosis & Itemized Approvals",
+    "question": "What if I want to discuss a repair estimate directly with the advisor?",
+    "answer": "You can hit the 'Request Callback' button on the itemized estimate screen in the app to speak directly with the service advisor before approving[cite: 1]."
+  },
+  {
+    "id": "FAQ-021",
+    "category": "Pickup & Delivery Services",
+    "question": "How does doorstep vehicle pickup work securely on CarSlot?",
+    "answer": "A verified driver is assigned to your booking, and key handover requires a One-Time Password (OTP) verification on the driver's app before custody transfers[cite: 1]."
+  },
+  {
+    "id": "FAQ-022",
+    "category": "Pickup & Delivery Services",
+    "question": "What details are logged during vehicle pickup intake?",
+    "answer": "The driver logs current fuel levels, odometer readings, pre-existing exterior/interior photos, personal belongings, and reported symptoms into a digital checklist[cite: 1]."
+  },
+  {
+    "id": "FAQ-023",
+    "category": "Pickup & Delivery Services",
+    "question": "Who verifies the condition checklist before my car is driven away?",
+    "answer": "Both you and the pickup driver must inspect and acknowledge the digital condition record in the app before transport begins[cite: 1]."
+  },
+  {
+    "id": "FAQ-024",
+    "category": "Pickup & Delivery Services",
+    "question": "How do I verify the identity of the driver arriving at my location?",
+    "answer": "Check the driver's details and profile photo in your CarSlot app and match the OTP generated for key handover verification[cite: 1]."
+  },
+  {
+    "id": "FAQ-025",
+    "category": "Pickup & Delivery Services",
+    "question": "What should I do if my car suffers physical damage during pickup or delivery?",
+    "answer": "Report the issue immediately; CarSlot support will trigger an immediate human escalation and audit pre-pickup intake photos to resolve claims[cite: 1]."
+  },
+  {
+    "id": "FAQ-026",
+    "category": "Pickup & Delivery Services",
+    "question": "Can I track my car's status during pickup and servicing?",
+    "answer": "Yes, the app provides digital job tracking from driver assignment and handover through workshop arrival, inspection, and return delivery[cite: 1]."
+  },
+  {
+    "id": "FAQ-027",
+    "category": "Pickup & Delivery Services",
+    "question": "Can I request pickup and delivery at different addresses in Chennai?",
+    "answer": "Yes, you can specify separate pickup and drop-off locations within eligible service radii across the Chennai Metropolitan Area during booking[cite: 1]."
+  },
+  {
+    "id": "FAQ-028",
+    "category": "Pickup & Delivery Services",
+    "question": "Are CarSlot pickup drivers verified and background-checked?",
+    "answer": "Yes, all assigned pickup technicians and drivers undergo identity verification and adhere to CarSlot transport security protocols[cite: 1]."
+  },
+  {
+    "id": "FAQ-029",
+    "category": "Pickup & Delivery Services",
+    "question": "What if personal belongings are left inside the vehicle during pickup?",
+    "answer": "Drivers conduct a joint cabin check during intake and log observed personal belongings in the time-stamped digital condition report[cite: 1]."
+  },
+  {
+    "id": "FAQ-030",
+    "category": "Pickup & Delivery Services",
+    "question": "What happens if delivery is delayed beyond the estimated time?",
+    "answer": "Service centers are monitored against SLA benchmarks; delays exceeding strict thresholds are flagged for operational follow-up and notification[cite: 1]."
+  },
+  {
+    "id": "FAQ-031",
+    "category": "Pricing & Payments",
+    "question": "How do I pay for my car service on CarSlot?",
+    "answer": "You can pay securely through the app using UPI, credit/debit cards, net banking, or integrated digital payment gateways[cite: 1]."
+  },
+  {
+    "id": "FAQ-032",
+    "category": "Pricing & Payments",
+    "question": "Is a deposit required to hold a service booking?",
+    "answer": "Depending on workshop policy, a temporary deposit may be required during booking to hold live bay capacity, which is applied to your final bill[cite: 1]."
+  },
+  {
+    "id": "FAQ-033",
+    "category": "Pricing & Payments",
+    "question": "What is CarSlot's cancellation and refund policy?",
+    "answer": "Bookings cancelled prior to the workshop's cutoff window receive full deposit refunds back to the original payment method[cite: 1]."
+  },
+  {
+    "id": "FAQ-034",
+    "category": "Pricing & Payments",
+    "question": "What happens if I cancel late or miss my scheduled service time?",
+    "answer": "Late cancellations made past the cutoff window or no-shows may incur standard processing fees according to the center's declared policy[cite: 1]."
+  },
+  {
+    "id": "FAQ-035",
+    "category": "Pricing & Payments",
+    "question": "How long does it take to process a booking deposit refund?",
+    "answer": "Approved refunds are processed automatically to your original payment account within standard banking gateway settlement timelines[cite: 1]."
+  },
+  {
+    "id": "FAQ-036",
+    "category": "Pricing & Payments",
+    "question": "What should I do if I experience a payment processing error or double-charge?",
+    "answer": "Contact support immediately; billing discrepancies and payment gateway errors are escalated directly to human support teams for resolution[cite: 1]."
+  },
+  {
+    "id": "FAQ-037",
+    "category": "Pricing & Payments",
+    "question": "Are there any hidden platform fees charged to customers?",
+    "answer": "No, CarSlot maintains strict price transparency, displaying upfront price estimates and clear breakdowns without hidden surcharges[cite: 1]."
+  },
+  {
+    "id": "FAQ-038",
+    "category": "Pricing & Payments",
+    "question": "Can workshops charge more than the agreed itemized estimate?",
+    "answer": "No, workshops are strictly bound by the itemized work order approved by you digitally; unapproved additions cannot be billed[cite: 1]."
+  },
+  {
+    "id": "FAQ-039",
+    "category": "Pricing & Payments",
+    "question": "When do I pay for additional approved repairs?",
+    "answer": "Additional repair costs approved during inspection are added to your final digital invoice and settled prior to vehicle redelivery[cite: 1]."
+  },
+  {
+    "id": "FAQ-040",
+    "category": "Pricing & Payments",
+    "question": "Can I get an itemized tax invoice for corporate or tax reimbursement?",
+    "answer": "Yes, downloadable itemized digital invoices with GST breakdowns are issued directly in the app upon service completion[cite: 1]."
+  },
+  {
+    "id": "FAQ-041",
+    "category": "Quality & Ratings Integrity",
+    "question": "How are customer reviews and star ratings calculated?",
+    "answer": "Ratings are calculated using volume, recency, and anti-fraud signal weighting from verified customer bookings[cite: 1]."
+  },
+  {
+    "id": "FAQ-042",
+    "category": "Quality & Ratings Integrity",
+    "question": "Who is eligible to leave a star rating or review for a workshop?",
+    "answer": "Only customers with verified, completed service bookings on CarSlot can submit ratings and feedback (Rule BR-15)[cite: 1]."
+  },
+  {
+    "id": "FAQ-043",
+    "category": "Quality & Ratings Integrity",
+    "question": "Can service centers pay CarSlot to delete or suppress negative customer reviews?",
+    "answer": "No. Under platform guardrails, payments or subscriptions cannot edit, suppress, delete negative feedback, or alter organic ratings[cite: 1]."
+  },
+  {
+    "id": "FAQ-044",
+    "category": "Quality & Ratings Integrity",
+    "question": "What are 'Sponsored' listings in my search results?",
+    "answer": "Sponsored results are clearly labeled paid boosters purchased by eligible centers to increase search visibility without altering organic ratings[cite: 1]."
+  },
+  {
+    "id": "FAQ-045",
+    "category": "Quality & Ratings Integrity",
+    "question": "Does a 'Sponsored' tag mean a workshop is top-rated?",
+    "answer": "Not necessarily. Sponsored centers must pass quality and capacity checks, but paid boosters cannot alter star ratings or organic rankings[cite: 1]."
+  },
+  {
+    "id": "FAQ-046",
+    "category": "Quality & Ratings Integrity",
+    "question": "What quality thresholds must a workshop meet to list on CarSlot?",
+    "answer": "Workshops must verify identity, business registration, facility capabilities, technician credentials, and maintain minimum SLA scores[cite: 1]."
+  },
+  {
+    "id": "FAQ-047",
+    "category": "Quality & Ratings Integrity",
+    "question": "How does CarSlot prevent fake or artificial reviews?",
+    "answer": "By requiring mandatory completed booking validation tokens and applying automated anti-fraud signal weighting to all review submissions[cite: 1]."
+  },
+  {
+    "id": "FAQ-048",
+    "category": "Quality & Ratings Integrity",
+    "question": "What should I do if a workshop breaches service SLA or timeline expectations?",
+    "answer": "Service breaches exceeding 48 hours or unauthorized vehicle usage trigger immediate human escalation and platform quality audit[cite: 1]."
+  },
+  {
+    "id": "FAQ-049",
+    "category": "Quality & Ratings Integrity",
+    "question": "Are repairs completed through CarSlot covered by warranty?",
+    "answer": "Itemized estimates outline specific warranty details for installed parts and completed labor as guaranteed by the service provider[cite: 1]."
+  },
+  {
+    "id": "FAQ-050",
+    "category": "Quality & Ratings Integrity",
+    "question": "How does CarSlot handle unapproved vehicle usage by workshop staff?",
+    "answer": "Vehicle intake odometer logs verify mileage; unauthorized driving triggers immediate human investigation and workshop penalty audit[cite: 1]."
+  },
+  {
+    "id": "FAQ-051",
+    "category": "Roadside Support & Exclusions",
+    "question": "Does CarSlot provide emergency roadside assistance (RSA) or towing?",
+    "answer": "No. CarSlot MVP focuses on scheduled maintenance and inspection slots and does not offer emergency roadside towing dispatch[cite: 1]."
+  },
+  {
+    "id": "FAQ-052",
+    "category": "Roadside Support & Exclusions",
+    "question": "What should I do if my car breaks down on the highway right now?",
+    "answer": "For active breakdowns, contact emergency roadside assistance providers or human support hotlines as CarSlot does not dispatch emergency RSA[cite: 1]."
+  },
+  {
+    "id": "FAQ-053",
+    "category": "Roadside Support & Exclusions",
+    "question": "Can I book a service slot if my vehicle is non-operational?",
+    "answer": "You can schedule service slots if you arrange private transport or if the selected workshop offers towing logistics upon request[cite: 1]."
+  },
+  {
+    "id": "FAQ-054",
+    "category": "Roadside Support & Exclusions",
+    "question": "Does CarSlot handle direct insurance accidental damage claims?",
+    "answer": "Participating authorized dealers assist with insurance estimates, but legal insurance processing depends on center-specific policies[cite: 1]."
+  },
+  {
+    "id": "FAQ-055",
+    "category": "Roadside Support & Exclusions",
+    "question": "Can I use CarSlot for custom vehicle tuning or body modifications?",
+    "answer": "CarSlot primarily connects owners with periodic servicing, inspections, and standard mechanical repairs at verified workshops[cite: 1]."
+  },
+  {
+    "id": "FAQ-056",
+    "category": "Roadside Support & Exclusions",
+    "question": "What happens if a workshop cannot finish work before my travel deadline?",
+    "answer": "If technician inspection reveals major delays impacting travel deadlines, advisors must update the digital timeline for customer re-approval[cite: 1]."
+  },
+  {
+    "id": "FAQ-057",
+    "category": "Roadside Support & Exclusions",
+    "question": "Is CarSlot available outside the Chennai Metropolitan Area?",
+    "answer": "CarSlot currently focuses exclusively on servicing, inspection, and partner workshop networks within the Chennai Metropolitan Area[cite: 1]."
+  },
+  {
+    "id": "FAQ-058",
+    "category": "Roadside Support & Exclusions",
+    "question": "How are legal disputes regarding repair estimates handled?",
+    "answer": "Non-binding pre-inspection pricing serves as promotional guidance; legal obligations are established via approved digital work orders[cite: 1]."
+  },
+  {
+    "id": "FAQ-059",
+    "category": "Roadside Support & Exclusions",
+    "question": "What happens if required spare parts are out of stock at the workshop?",
+    "answer": "The platform checks parts availability constraints before confirming arrival slots to minimize waiting delays during service[cite: 1]."
+  },
+  {
+    "id": "FAQ-060",
+    "category": "Roadside Support & Exclusions",
+    "question": "Can I track active work progress inside the workshop bay?",
+    "answer": "Digital job tracking updates key stages (Intake, Inspection, Approval, Work-in-Progress, Ready) in real time via the app[cite: 1]."
+  },
+  {
+    "id": "FAQ-061",
+    "category": "Account & Privacy",
+    "question": "How do I request deletion of my user account and vehicle records?",
+    "answer": "Submit an account deletion request in the app; your request is routed to the Privacy team under NFR-04 data protection rules[cite: 1]."
+  },
+  {
+    "id": "FAQ-062",
+    "category": "Account & Privacy",
+    "question": "Will CarSlot share my contact details with workshops before booking?",
+    "answer": "No, personal contact data is minimized and shared only with the specific center where you hold or confirm a booking[cite: 1]."
+  },
+  {
+    "id": "FAQ-063",
+    "category": "Account & Privacy",
+    "question": "Will CarSlot staff ever ask for my password or bank PIN?",
+    "answer": "Never. CarSlot systems strictly forbid prompting users for passwords, UPI PINs, or raw banking credentials[cite: 1]."
+  },
+  {
+    "id": "FAQ-064",
+    "category": "Account & Privacy",
+    "question": "How is my digital vehicle inspection media stored?",
+    "answer": "Intake photos, videos, and digital condition records are encrypted and stored securely to maintain an auditable chain of custody[cite: 1]."
+  },
+  {
+    "id": "FAQ-065",
+    "category": "Account & Privacy",
+    "question": "Can I manage multiple personal or family cars under one account?",
+    "answer": "Yes, you can register multiple vehicles in your CarSlot profile to easily search slots and track individual service histories[cite: 1]."
+  },
+  {
+    "id": "FAQ-066",
+    "category": "Account & Privacy",
+    "question": "How do I update my registered mobile number or delivery addresses?",
+    "answer": "Navigate to 'Account Settings' in the app to update your contact details, default addresses, or vehicle details[cite: 1]."
+  },
+  {
+    "id": "FAQ-067",
+    "category": "Account & Privacy",
+    "question": "What security rules protect my digital repair approvals?",
+    "answer": "Approvals require authenticated app sessions, creating time-stamped digital logs for every item approved or rejected[cite: 1]."
+  },
+  {
+    "id": "FAQ-068",
+    "category": "Account & Privacy",
+    "question": "Where can I find past service records and inspection reports?",
+    "answer": "All past digital inspection records, itemized approvals, and tax invoices remain permanently accessible under your account history[cite: 1]."
+  },
+  {
+    "id": "FAQ-069",
+    "category": "Account & Privacy",
+    "question": "What should I do if I suspect unauthorized activity on my CarSlot account?",
+    "answer": "Contact customer support immediately to lock your profile and audit recent account activities and active holds[cite: 1]."
+  },
+  {
+    "id": "FAQ-070",
+    "category": "Account & Privacy",
+    "question": "Does CarSlot sell user data to third-party advertisers?",
+    "answer": "No, personal data is collected strictly under data minimization guidelines solely for facilitating service bookings and logistics[cite: 1]."
+  },
+  {
+    "id": "FAQ-071",
+    "category": "Partner & Workshop Management",
+    "question": "What are the requirements to join CarSlot as a partner workshop?",
+    "answer": "Workshops must verify identity, submit business registrations, prove facility/technician capabilities, declare brands, and agree to SLAs[cite: 1]."
+  },
+  {
+    "id": "FAQ-072",
+    "category": "Partner & Workshop Management",
+    "question": "What subscription plans are available for service centers?",
+    "answer": "CarSlot offers Starter Plan (single-branch), Growth Plan (established), and Pro / Multi-Branch Plan (dealer networks)[cite: 1]."
+  },
+  {
+    "id": "FAQ-073",
+    "category": "Partner & Workshop Management",
+    "question": "What features are included in the workshop Starter Plan?",
+    "answer": "Includes verified profile listing, capacity & slot management tools, basic job tracking, and standard customer support[cite: 1]."
+  },
+  {
+    "id": "FAQ-074",
+    "category": "Partner & Workshop Management",
+    "question": "What additional benefits does the workshop Growth Plan offer?",
+    "answer": "Includes multi-staff access, advanced analytics, digital review tools, quarterly promotion credits, and priority support[cite: 1]."
+  },
+  {
+    "id": "FAQ-075",
+    "category": "Partner & Workshop Management",
+    "question": "What entitlements come with the workshop Pro / Multi-Branch Plan?",
+    "answer": "Includes central multi-branch management, DMS API integration access, custom SLA reporting, and a dedicated manager[cite: 1]."
+  },
+  {
+    "id": "FAQ-076",
+    "category": "Partner & Workshop Management",
+    "question": "How do Booster placements work for partner workshops?",
+    "answer": "Eligible centers can purchase time-bound Sponsored Search Results or Weekend Boosts to increase targeted geographic visibility[cite: 1]."
+  },
+  {
+    "id": "FAQ-077",
+    "category": "Partner & Workshop Management",
+    "question": "Can a fully booked workshop purchase a Booster placement to get orders?",
+    "answer": "No. Boosters require an Eligibility Gate check; if a workshop is fully booked, suspended, or below quality score, boosters will not display[cite: 1]."
+  },
+  {
+    "id": "FAQ-078",
+    "category": "Partner & Workshop Management",
+    "question": "Are there density limits on how many sponsored slots appear on search pages?",
+    "answer": "Yes, sponsored slots are strictly capped per search page to prevent user fatigue and preserve organic user choice[cite: 1]."
+  },
+  {
+    "id": "FAQ-079",
+    "category": "Partner & Workshop Management",
+    "question": "Can workshop managers manually override public slot allocation?",
+    "answer": "Public slots are allocated strictly by time-stamped confirmation rules; any manual overrides by staff are logged for platform audit[cite: 1]."
+  },
+  {
+    "id": "FAQ-080",
+    "category": "Partner & Workshop Management",
+    "question": "How do partner Dealer Management Systems (DMS) integrate with CarSlot?",
+    "answer": "Pro tier partner networks integrate via DMS APIs to automatically synchronize real-time bay, technician, and schedule availability[cite: 1]."
+  }
+]
