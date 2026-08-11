@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="CarSlot Cinematic Grid theme preview for the UX case-study website.">
+  <title>CarSlot — Cinematic Grid theme preview</title>
+  <style>
+    :root{
+      color-scheme:dark;
+      --canvas:#070707;--deep:#030303;--surface:#10100f;--raised:#171411;--warm:#21150f;
+      --paper:#f3eee8;--ink:#fffaf4;--body:#d3cbc3;--muted:#92877d;--muted-strong:#b4aaa1;
+      --paper-ink:#17110e;--paper-body:#5f554e;--line:#2b2622;--line-strong:#4b3930;--paper-line:#d8cec5;
+      --orange:#ff5a1f;--orange-hover:#ff7345;--orange-soft:#ffb094;--amber:#f2a65a;
+      --success:#78c99a;--danger:#ff8175;--focus:#ffd0bd;
+      --display:"Arial Narrow","Roboto Condensed","Inter Tight",Arial,sans-serif;
+      --text:Inter,Aptos,"Segoe UI",Arial,sans-serif;--mono:"IBM Plex Mono",Consolas,monospace;
+      --max:1240px;--wide:1440px;--gutter:clamp(20px,4vw,56px);--section:clamp(88px,12vw,170px);
+      --ease:cubic-bezier(.2,.8,.2,1);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--canvas);color:var(--body);font:16px/1.65 var(--text);overflow-x:hidden}
+    a{color:inherit} button,a{-webkit-tap-highlight-color:transparent}
+    a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+    .skip{position:fixed;z-index:100;left:16px;top:-80px;padding:12px 18px;border-radius:999px;background:var(--paper);color:var(--paper-ink)}
+    .skip:focus{top:14px}
+    .progress{position:fixed;z-index:90;inset:0 auto auto 0;width:0;height:2px;background:var(--orange);box-shadow:0 0 18px rgba(255,90,31,.65)}
+    .grid-bg{position:absolute;inset:0;pointer-events:none;opacity:.48;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:40px 40px;mask-image:linear-gradient(to bottom,black,transparent 92%)}
+    .wrap{width:min(var(--max),calc(100% - var(--gutter)*2));margin:auto}.wrap.wide{width:min(var(--wide),calc(100% - var(--gutter)*2))}
+    .eyebrow{margin:0 0 18px;color:var(--orange-soft);font:600 11px/1.4 var(--mono);letter-spacing:.16em;text-transform:uppercase}
+    .eyebrow.dark{color:#9d3d1e}.eyebrow span{color:var(--muted);margin-left:10px}
+    h1,h2,h3,p{margin-top:0}h1,h2,h3{color:var(--ink)}
+    h1{margin:0;font:700 clamp(64px,11vw,150px)/.82 var(--display);letter-spacing:-.065em;text-transform:uppercase}
+    h2{margin:0;font:700 clamp(44px,7vw,92px)/.9 var(--display);letter-spacing:-.05em;text-transform:uppercase}
+    h3{font:600 22px/1.14 var(--text);letter-spacing:-.025em}
+    .lead{max-width:780px;font-size:clamp(19px,2vw,26px);line-height:1.42;color:var(--muted-strong)}
+    .button{display:inline-flex;min-height:48px;align-items:center;justify-content:center;gap:12px;padding:11px 20px;border:1px solid var(--line-strong);border-radius:999px;color:var(--ink);background:transparent;text-decoration:none;font-weight:600;transition:.25s var(--ease)}
+    .button.primary{border-color:var(--orange);background:var(--orange);color:#0b0705}.button:hover{border-color:var(--orange-hover);transform:translateY(-2px)}
+    .button .arrow{transition:transform .25s var(--ease)}.button:hover .arrow{transform:translateX(3px)}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+    .nav{position:sticky;z-index:80;top:0;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(7,7,7,.82);backdrop-filter:blur(18px)}
+    .nav-inner{min-height:64px;display:flex;align-items:center;gap:28px}.mark{display:flex;align-items:center;gap:10px;color:var(--ink);font-weight:700;text-decoration:none;white-space:nowrap}
+    .mark-dot{width:11px;height:11px;border-radius:50%;background:var(--orange);box-shadow:0 0 20px rgba(255,90,31,.8)}
+    .nav-links{display:flex;align-items:center;gap:6px;overflow-x:auto;scrollbar-width:none}.nav-links::-webkit-scrollbar{display:none}
+    .nav-links a{min-height:44px;display:flex;align-items:center;padding:0 12px;color:var(--muted-strong);text-decoration:none;font-size:13px;white-space:nowrap;border-radius:999px}
+    .nav-links a:hover,.nav-links a.active{color:var(--ink);background:rgba(255,255,255,.06)}
+    .nav .button{min-height:40px;margin-left:auto;padding:7px 15px;font-size:13px;white-space:nowrap}
+
+    .hero{position:relative;min-height:calc(100vh - 64px);display:grid;align-items:center;padding:70px 0 92px;isolation:isolate}
+    .hero::before{content:"";position:absolute;z-index:-1;width:min(62vw,840px);aspect-ratio:1;right:-12%;top:4%;background:radial-gradient(circle,rgba(255,90,31,.26),rgba(255,90,31,.08) 30%,transparent 67%);filter:blur(20px)}
+    .hero-copy{position:relative;z-index:2}.hero h1 .outline{-webkit-text-stroke:1px rgba(255,250,244,.42);color:transparent}.hero h1 .hot{color:var(--orange)}
+    .hero-bottom{display:grid;grid-template-columns:1fr minmax(280px,430px);gap:48px;align-items:end;margin-top:52px}.hero-bottom .lead{margin:0}
+    .hero-actions{display:flex;gap:12px;justify-content:flex-end;flex-wrap:wrap}
+    .hero-meta{position:absolute;right:var(--gutter);bottom:22px;color:var(--muted);font:10px/1.4 var(--mono);letter-spacing:.13em;text-transform:uppercase;writing-mode:vertical-rl}
+
+    section{position:relative;padding:var(--section) 0;border-top:1px solid var(--line)}
+    .section-head{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(290px,.7fr);gap:48px;align-items:end;margin-bottom:64px}.section-head .lead{margin:0}
+    .phase-number{position:absolute;right:var(--gutter);top:54px;color:rgba(255,255,255,.045);font:700 clamp(80px,15vw,220px)/.8 var(--display);letter-spacing:-.08em}
+
+    .process-track{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+    .process-track::after{content:"";position:absolute;left:0;top:-2px;width:25%;height:3px;background:var(--orange);box-shadow:0 0 22px rgba(255,90,31,.7)}
+    .phase{min-height:260px;padding:28px;background:var(--surface);transition:.3s var(--ease)}.phase:hover{background:var(--raised);transform:translateY(-5px)}
+    .phase b{display:block;color:var(--orange);font:600 12px var(--mono);letter-spacing:.12em}.phase h3{margin:64px 0 12px;font-size:30px}.phase p{margin:0;color:var(--muted)}
+
+    .evidence-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}.card{position:relative;min-height:250px;padding:28px;border:1px solid var(--line);border-radius:16px;background:var(--surface);overflow:hidden}
+    .card::after{content:"";position:absolute;inset:auto -30% -60% auto;width:220px;aspect-ratio:1;border-radius:50%;background:rgba(255,90,31,.08);filter:blur(30px)}
+    .card.span-7{grid-column:span 7}.card.span-5{grid-column:span 5}.card.span-4{grid-column:span 4}
+    .card .label{display:flex;justify-content:space-between;color:var(--muted);font:600 10px var(--mono);letter-spacing:.14em;text-transform:uppercase}.card .label em{color:var(--orange);font-style:normal}
+    .card h3{margin:68px 0 12px;font-size:clamp(22px,3vw,40px)}.card p{max-width:520px;margin-bottom:0;color:var(--muted-strong)}
+    .signal{display:flex;align-items:center;gap:10px;margin-top:24px;color:var(--orange-soft);font:12px var(--mono)}.signal i{width:42px;height:1px;background:var(--orange)}
+
+    .paper-section{background:var(--paper);color:var(--paper-body);border-color:var(--paper-line)}.paper-section h2,.paper-section h3{color:var(--paper-ink)}
+    .paper-section .lead{color:var(--paper-body)}
+    .diagram-shell{padding:clamp(20px,4vw,50px);border:1px solid var(--paper-line);border-radius:24px;background:#fbf8f4;box-shadow:0 30px 80px rgba(38,22,12,.08);overflow:auto}
+    .diagram-title{display:flex;justify-content:space-between;gap:24px;margin-bottom:42px}.diagram-title p{margin:0;color:#84766c;font:11px var(--mono);letter-spacing:.1em;text-transform:uppercase}
+    .ia{min-width:820px}.ia-root{width:220px;margin:0 auto 50px;padding:18px;border-radius:999px;background:var(--orange);color:#130a06;text-align:center;font-weight:700}
+    .ia-groups{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.ia-groups::before{content:"";position:absolute;left:12.5%;right:12.5%;top:-26px;border-top:1px solid #b6a79c}
+    .ia-group{position:relative;padding:18px;border:1px solid var(--paper-line);border-radius:12px;background:white}.ia-group::before{content:"";position:absolute;left:50%;top:-27px;height:26px;border-left:1px solid #b6a79c}
+    .ia-group b{display:block;color:var(--paper-ink)}.ia-group small{display:block;margin:4px 0 18px;color:#9d3d1e;font:10px var(--mono);letter-spacing:.1em}
+    .leaf{margin-top:8px;padding:9px 11px;border-left:2px solid #e6ddd5;background:#f5f0eb;color:#665b53;font-size:13px}.leaf.active{border-color:var(--orange);color:var(--paper-ink)}
+
+    .flow-section{overflow:hidden}.flow-canvas{position:relative;min-width:1040px;padding:50px 36px;border:1px solid var(--line);border-radius:24px;background:var(--surface)}
+    .flow-row{display:grid;grid-template-columns:repeat(5,1fr);gap:54px;align-items:center}.flow-node{position:relative;min-height:125px;padding:18px;border:1px solid var(--line-strong);border-radius:14px;background:var(--raised)}
+    .flow-node:not(:last-child)::after{content:"";position:absolute;left:calc(100% + 1px);top:50%;width:54px;border-top:2px solid var(--orange);box-shadow:0 0 12px rgba(255,90,31,.45)}
+    .flow-node:not(:last-child)::before{content:"";position:absolute;z-index:2;left:calc(100% + 48px);top:calc(50% - 4px);width:8px;height:8px;border-top:2px solid var(--orange);border-right:2px solid var(--orange);transform:rotate(45deg)}
+    .flow-node small{color:var(--orange-soft);font:10px var(--mono);letter-spacing:.12em}.flow-node b{display:block;margin-top:13px;color:var(--ink);line-height:1.25}.flow-node span{display:block;margin-top:8px;color:var(--muted);font-size:12px}
+    .flow-branch{width:190px;margin:44px 0 0 51%;padding:16px;border:1px solid #5b493a;border-radius:14px;color:var(--amber);background:#17130f;font-size:13px}.flow-branch::before{content:"↳ ";color:var(--orange)}
+    .legend{display:flex;gap:20px;flex-wrap:wrap;margin-top:28px;color:var(--muted);font:11px var(--mono)}.legend span::before{content:"";display:inline-block;width:20px;height:2px;margin:0 8px 3px 0;background:var(--orange)}.legend span.alt::before{background:var(--amber)}.legend span.good::before{background:var(--success)}
+
+    .screen-stage{position:relative;padding:clamp(30px,6vw,80px);border:1px solid var(--line);border-radius:28px;background:radial-gradient(circle at 65% 40%,rgba(255,90,31,.24),transparent 36%),#090807;overflow:hidden}
+    .screen-stage::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 79px,rgba(255,255,255,.025) 80px)}
+    .device{position:relative;width:min(860px,94%);margin:auto;padding:12px 12px 28px;border:1px solid #51463f;border-radius:22px;background:linear-gradient(145deg,#2c2926,#080808 65%);box-shadow:0 45px 100px rgba(0,0,0,.65);transform:perspective(1400px) rotateX(2deg) rotateY(-4deg)}
+    .camera{width:7px;height:7px;margin:-3px auto 8px;border-radius:50%;background:#030303;box-shadow:0 0 0 1px #3a3532}
+    .screen{min-height:430px;padding:clamp(20px,4vw,44px);border:1px solid #3c322c;border-radius:12px;background:linear-gradient(120deg,#0b0908,#23110a);overflow:hidden}
+    .app-nav{display:flex;justify-content:space-between;align-items:center;color:#b8aaa2;font-size:12px}.app-mark{color:var(--ink);font-weight:700}.app-mark i{display:inline-block;width:8px;height:8px;margin-right:7px;border-radius:50%;background:var(--orange)}
+    .app-main{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center;min-height:330px}.app-copy h3{margin:0;font:700 clamp(36px,6vw,76px)/.88 var(--display);letter-spacing:-.055em;text-transform:uppercase}.app-copy h3 span{color:var(--orange)}
+    .app-copy p{max-width:380px;margin:22px 0;color:#bcaea4}.app-actions{display:flex;gap:10px;flex-wrap:wrap}.app-actions span{padding:8px 12px;border:1px solid #4b3c34;border-radius:999px;font-size:11px}.app-actions span:first-child{border-color:var(--orange);background:var(--orange);color:#120a06}
+    .slot-card{position:relative;padding:24px;border:1px solid #5d3928;border-radius:18px;background:rgba(255,90,31,.08);box-shadow:0 0 70px rgba(255,90,31,.16)}.slot-card small{color:var(--orange-soft);font:10px var(--mono);letter-spacing:.12em}.slot-card strong{display:block;margin:22px 0 6px;color:var(--ink);font-size:30px}.slot-card p{color:#a99a91;font-size:13px}.slots{display:flex;gap:7px}.slots i{display:block;width:34px;height:34px;border:1px solid #4a352a;border-radius:8px}.slots i:nth-child(2){background:var(--orange);box-shadow:0 0 18px rgba(255,90,31,.42)}
+    .screen-caption{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end;margin-top:42px}.screen-caption p{max-width:640px;margin:0;color:var(--muted-strong)}
+
+    .validation{display:grid;grid-template-columns:.8fr 1.2fr;gap:20px}.score{display:grid;place-items:center;min-height:390px;padding:32px;border:1px solid var(--line);border-radius:20px;background:var(--surface);text-align:center}.score strong{font:700 clamp(80px,12vw,160px)/.8 var(--display);color:var(--orange);letter-spacing:-.08em}.score span{color:var(--muted);font:11px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+    .checks{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}.check{display:grid;grid-template-columns:44px 1fr auto;gap:18px;align-items:center;padding:20px;background:var(--surface)}.check b{color:var(--ink)}.check p{margin:2px 0 0;color:var(--muted);font-size:13px}.check .tick{width:30px;height:30px;display:grid;place-items:center;border-radius:50%;background:rgba(120,201,154,.12);color:var(--success)}.check > small{color:var(--success);font:10px var(--mono);letter-spacing:.1em;text-transform:uppercase}
+
+    .final{min-height:78vh;display:grid;align-items:center;overflow:hidden}.final::before{content:"";position:absolute;width:80vw;aspect-ratio:1;right:-38vw;top:-34vw;border-radius:50%;border:1px solid rgba(255,90,31,.28);box-shadow:0 0 90px rgba(255,90,31,.2),inset 0 0 90px rgba(255,90,31,.1)}
+    .final-copy{position:relative;z-index:2;max-width:1020px}.final h2{margin-bottom:35px}.final h2 span{color:var(--orange)}.final .lead{margin-bottom:36px}.final .button.primary{box-shadow:0 0 48px rgba(255,90,31,.26)}
+    footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted);font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:20px}
+
+    [data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .52s var(--ease),transform .52s var(--ease)}[data-reveal].visible{opacity:1;transform:none}
+    @media(max-width:980px){.nav-links{display:none}.hero-bottom,.section-head,.validation{grid-template-columns:1fr}.hero-actions{justify-content:flex-start}.process-track{grid-template-columns:repeat(2,1fr)}.card.span-7,.card.span-5{grid-column:span 12}.card.span-4{grid-column:span 6}.app-main{grid-template-columns:1fr}.slot-card{display:none}.screen{min-height:360px}.screen-caption{grid-template-columns:1fr}}
+    @media(max-width:680px){:root{--gutter:20px}.nav-inner{gap:12px}.nav .button{font-size:0;width:40px;padding:0}.nav .button .arrow{font-size:14px}.hero{min-height:82vh}.hero-bottom{margin-top:34px}.process-track{grid-template-columns:1fr}.phase{min-height:210px}.phase h3{margin-top:38px}.card.span-7,.card.span-5,.card.span-4{grid-column:span 12}.diagram-shell{border-radius:14px}.device{width:100%;padding:7px 7px 18px;border-radius:14px;transform:none}.screen{min-height:330px;border-radius:8px}.app-main{min-height:270px}.screen-stage{padding:18px;border-radius:16px}.check{grid-template-columns:38px 1fr}.check>small{grid-column:2}.footer-inner{display:block}.hero-meta{display:none}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}[data-reveal]{opacity:1;transform:none}.button:hover{transform:none}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <div class="progress" aria-hidden="true"></div>
+
+  <nav class="nav" aria-label="Theme preview sections">
+    <div class="wrap nav-inner">
+      <a class="mark" href="#top"><span class="mark-dot" aria-hidden="true"></span>CarSlot / Case study</a>
+      <div class="nav-links">
+        <a href="#direction">Direction</a><a href="#process">Process</a><a href="#evidence">Evidence</a><a href="#ia">IA</a><a href="#flow">Flow</a><a href="#screens">Screens</a><a href="#validation">Validation</a>
+      </div>
+      <a class="button primary" href="../AI%20Design/project/outputs/product-design/carslot-product-prototype.html" target="_blank" rel="noopener">Explore product <span class="arrow" aria-hidden="true">↗</span><span class="sr-only"> — opens in a new tab</span></a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="grid-bg"></div>
+    <div class="wrap hero-copy" data-reveal>
+      <p class="eyebrow">Theme preview <span>01 / Cinematic grid</span></p>
+      <h1><span class="outline">Find.</span><br><span>Fit.</span> <span class="hot">Book.</span></h1>
+      <div class="hero-bottom">
+        <p class="lead">A cinematic UX case study about turning uncertain service availability into a clear, explainable appointment journey.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#direction">View direction <span class="arrow" aria-hidden="true">↓</span></a>
+          <a class="button" href="DESIGN.md">Read DESIGN.md <span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-meta">CarSlot · UX case study · Theme approval</div>
+  </header>
+
+  <main id="main">
+    <section id="direction">
+      <div class="phase-number" aria-hidden="true">01</div>
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <div><p class="eyebrow">Visual direction</p><h2>Controlled illumination.</h2></div>
+          <p class="lead">Black establishes focus. Orange connects evidence, decisions, and action. Technical grids hold complex UX artifacts without making the page feel like a report.</p>
+        </div>
+        <div class="process-track" data-reveal>
+          <article class="phase"><b>01 / Discover</b><h3>Understand</h3><p>Requirements, competition, users, behaviours, and pain points.</p></article>
+          <article class="phase"><b>02 / Define</b><h3>Focus</h3><p>Problem framing, opportunities, priorities, and concept direction.</p></article>
+          <article class="phase"><b>03 / Develop</b><h3>Design</h3><p>Architecture, flows, wireframes, visual language, and accessibility.</p></article>
+          <article class="phase"><b>04 / Deliver</b><h3>Prove</h3><p>Responsive prototype, specifications, validation, and handoff.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="phase-number" aria-hidden="true">02</div>
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <div><p class="eyebrow">Narrative system</p><h2>Evidence becomes a decision.</h2></div>
+          <p class="lead">Every artifact will be edited into a clear sequence: what we learned, why it mattered, what changed, and what the design produced.</p>
+        </div>
+        <div class="evidence-grid" id="evidence">
+          <article class="card span-7" data-reveal><div class="label"><span>Insight / user need</span><em>Discover</em></div><h3>Availability alone is not enough.</h3><p>Drivers need to understand why a service option fits their schedule, whether capacity is current, and what happens before confirmation.</p><div class="signal"><i></i>Finding → product principle</div></article>
+          <article class="card span-5" data-reveal><div class="label"><span>Decision / product</span><em>Define</em></div><h3>Certainty before commitment.</h3><p>Collect constraints first, explain eligibility, and keep temporary holds distinct from confirmed appointments.</p><div class="signal"><i></i>Principle → user journey</div></article>
+          <article class="card span-4" data-reveal><div class="label"><span>Output / structure</span><em>Develop</em></div><h3>One bounded journey</h3><p>Home → request → results → centre → hold → outcome.</p></article>
+          <article class="card span-4" data-reveal><div class="label"><span>Review / access</span><em>Validate</em></div><h3>Accessible by design</h3><p>Text equivalents, visible focus, status labels, and responsive diagrams.</p></article>
+          <article class="card span-4" data-reveal><div class="label"><span>Outcome / delivery</span><em>Deliver</em></div><h3>Implementation-ready</h3><p>Responsive prototype, specifications, decision log, and handoff guidance.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="paper-section" id="ia">
+      <div class="wrap wide">
+        <div class="section-head" data-reveal>
+          <div><p class="eyebrow dark">Information architecture</p><h2>Structure before screens.</h2></div>
+          <p class="lead">Dense UX structures reset to a light canvas for sustained legibility. Orange marks the primary journey while quiet branches remain visible.</p>
+        </div>
+        <div class="diagram-shell" data-reveal>
+          <div class="diagram-title"><p>CarSlot / Customer experience</p><p>Tree preview · horizontal scroll on small screens</p></div>
+          <div class="ia" role="img" aria-label="Information architecture preview. CarSlot branches into Start, Define request, Evaluate options, and Complete. Each branch contains related journey screens.">
+            <div class="ia-root">CarSlot experience</div>
+            <div class="ia-groups">
+              <div class="ia-group"><b>Start</b><small>IA-01</small><div class="leaf active">Home</div><div class="leaf">Service context</div></div>
+              <div class="ia-group"><b>Define request</b><small>IA-02</small><div class="leaf active">Constraints</div><div class="leaf">Vehicle & service</div></div>
+              <div class="ia-group"><b>Evaluate</b><small>IA-03</small><div class="leaf active">Eligible results</div><div class="leaf">Centre detail</div><div class="leaf">Compare options</div></div>
+              <div class="ia-group"><b>Complete</b><small>IA-04</small><div class="leaf active">Temporary hold</div><div class="leaf">Outcome</div><div class="leaf">Recovery</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="flow-section" id="flow">
+      <div class="phase-number" aria-hidden="true">03</div>
+      <div class="wrap wide">
+        <div class="section-head" data-reveal>
+          <div><p class="eyebrow">User flow</p><h2>Every state stays honest.</h2></div>
+          <p class="lead">The primary path illuminates in orange. Alternate, recovery, and success routes use labelled semantic colours and always include a text equivalent.</p>
+        </div>
+        <div class="flow-canvas" data-reveal role="img" aria-label="User flow preview: start request, express constraints, compare eligible centres, review centre evidence, and hold a slot. A recovery branch allows the user to adjust constraints.">
+          <div class="flow-row">
+            <div class="flow-node"><small>S-01 / START</small><b>Begin request</b><span>Vehicle and service context</span></div>
+            <div class="flow-node"><small>S-02 / INPUT</small><b>Express constraints</b><span>Arrival, completion, travel</span></div>
+            <div class="flow-node"><small>S-04 / COMPARE</small><b>Eligible centres</b><span>Explain fit and certainty</span></div>
+            <div class="flow-node"><small>S-06 / REVIEW</small><b>Centre evidence</b><span>Capacity, timing, policies</span></div>
+            <div class="flow-node"><small>S-08 / ACTION</small><b>Hold a slot</b><span>Temporary, explicit outcome</span></div>
+          </div>
+          <div class="flow-branch">No suitable match → adjust constraints or join waitlist</div>
+          <div class="legend"><span>Primary</span><span class="alt">Alternate</span><span class="good">Confirmed outcome</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="screens">
+      <div class="wrap wide">
+        <div class="section-head" data-reveal>
+          <div><p class="eyebrow">Final interface</p><h2>Screens become chapters.</h2></div>
+          <p class="lead">Product screens receive generous, cinematic presentation rather than being reduced to small thumbnails. Captions explain the decision behind each screen.</p>
+        </div>
+        <div class="screen-stage" data-reveal>
+          <div class="device" aria-label="Stylized CarSlot product screen preview">
+            <div class="camera"></div>
+            <div class="screen">
+              <div class="app-nav"><span class="app-mark"><i></i>CarSlot</span><span>Service appointment · Chennai</span></div>
+              <div class="app-main">
+                <div class="app-copy"><h3>A slot that <span>fits</span> your day.</h3><p>Compare eligible service centres using timing, distance, availability confidence, and the constraints that matter to you.</p><div class="app-actions"><span>Find a slot</span><span>How matching works</span></div></div>
+                <div class="slot-card"><small>RECOMMENDED FIT</small><strong>Tomorrow · 9:30</strong><p>Completion before 5:00 PM · 4.2 km · availability refreshed recently</p><div class="slots"><i></i><i></i><i></i><i></i></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="screen-caption" data-reveal><p><strong>Presentation principle:</strong> use light, contrast, scale, and depth to elevate the artifact while keeping every claim and interaction explanation outside the decorative frame.</p><a class="button" href="../AI%20Design/project/outputs/product-design/carslot-product-prototype.html" target="_blank" rel="noopener">Open existing product <span class="arrow" aria-hidden="true">↗</span><span class="sr-only"> — opens in a new tab</span></a></div>
+      </div>
+    </section>
+
+    <section id="validation">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <div><p class="eyebrow">Validation language</p><h2>Clarity over invented metrics.</h2></div>
+          <p class="lead">Where post-launch or usability metrics do not exist, the case study will show verified coverage, review findings, iteration decisions, and remaining research needs.</p>
+        </div>
+        <div class="validation">
+          <div class="score" data-reveal><div><strong>04</strong><br><span>Quality gates represented</span></div></div>
+          <div class="checks" data-reveal>
+            <div class="check"><span class="tick">✓</span><div><b>Content integrity</b><p>Claims mapped to existing artifacts.</p></div><small>Required</small></div>
+            <div class="check"><span class="tick">✓</span><div><b>Diagram accessibility</b><p>Visual model plus readable text equivalent.</p></div><small>Required</small></div>
+            <div class="check"><span class="tick">✓</span><div><b>Responsive behaviour</b><p>Clear reflow for narrative, cards, diagrams, and screens.</p></div><small>Required</small></div>
+            <div class="check"><span class="tick">✓</span><div><b>Prototype separation</b><p>Final experience opens in a dedicated new tab.</p></div><small>Required</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final" id="final">
+      <div class="grid-bg"></div>
+      <div class="wrap final-copy" data-reveal>
+        <p class="eyebrow">End-state preview</p>
+        <h2>Read the process.<br><span>Experience the result.</span></h2>
+        <p class="lead">The case study and the product remain connected but separate: evidence first, interactive final solution one deliberate action away.</p>
+        <a class="button primary" href="../AI%20Design/project/outputs/product-design/carslot-product-prototype.html" target="_blank" rel="noopener">Explore the final product <span class="arrow" aria-hidden="true">↗</span><span class="sr-only"> — opens in a new tab</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-inner"><span>CarSlot Cinematic Grid · Theme approval preview</span><span>Standalone files inside /casestudy only</span></div></footer>
+
+  <script>
+    const progress=document.querySelector('.progress');
+    const navLinks=[...document.querySelectorAll('.nav-links a')];
+    const sections=navLinks.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    function updateScroll(){
+      const max=document.documentElement.scrollHeight-innerHeight;
+      progress.style.width=(max>0?scrollY/max*100:0)+'%';
+      let current=sections[0];
+      for(const section of sections){if(section.getBoundingClientRect().top<=130)current=section}
+      navLinks.forEach(a=>a.classList.toggle('active',current&&a.getAttribute('href')==='#'+current.id));
+    }
+    addEventListener('scroll',updateScroll,{passive:true});updateScroll();
+    const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduce){document.querySelectorAll('[data-reveal]').forEach(el=>el.classList.add('visible'))}
+    else{
+      const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
+      document.querySelectorAll('[data-reveal]').forEach(el=>observer.observe(el));
+    }
+  </script>
+</body>
+</html>
