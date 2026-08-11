@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">CarSlot symbol</title>
+  <desc id="desc">An open circular route forms a C around a flowing S-shaped service slot.</desc>
+  <path d="M50 14.5A24 24 0 1 0 50 49.5" fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round"/>
+  <path d="M48 19.5H29.5c-6.1 0-10.5 3.4-10.5 8.2 0 4.9 4.4 8.3 10.5 8.3h6.8c5.6 0 9.7 3.3 9.7 8s-4.1 8-9.7 8H18" fill="none" stroke="#61E4CF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="48" cy="19.5" r="4.5" fill="#FFFFFF"/>
+  <circle cx="18" cy="52" r="4.5" fill="#FFFFFF"/>
+</svg>

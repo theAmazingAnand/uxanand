@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" role="img" aria-labelledby="title desc">
+  <title id="title">CarSlot</title>
+  <desc id="desc">CarSlot symbol and wordmark.</desc>
+  <g>
+    <path d="M50 14.5A24 24 0 1 0 50 49.5" fill="none" stroke="#0066CC" stroke-width="9" stroke-linecap="round"/>
+    <path d="M48 19.5H29.5c-6.1 0-10.5 3.4-10.5 8.2 0 4.9 4.4 8.3 10.5 8.3h6.8c5.6 0 9.7 3.3 9.7 8s-4.1 8-9.7 8H18" fill="none" stroke="#00A896" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="48" cy="19.5" r="4.5" fill="#0B1F3A"/>
+    <circle cx="18" cy="52" r="4.5" fill="#0B1F3A"/>
+  </g>
+  <text x="78" y="43" fill="#0B1F3A" font-family="Inter, Avenir Next, Segoe UI, Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="-1.5">Car<tspan fill="#0066CC">Slot</tspan></text>
+</svg>
